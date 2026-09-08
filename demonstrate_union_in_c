@@ -1,1 +1,25 @@
+#include <stdio.h>
+#include <string.h>
 
+union students {
+     char name[100];
+     int roll;
+     char course[100];
+     float percentage;
+   };
+
+int main(){
+     union students stu1;
+     strcpy(stu1.name,"anas");
+     printf("name = %s\n",stu1.name);
+  
+     stu1.roll = 11;
+     printf("roll no. = %d\n", stu1.roll);
+  
+     strcpy(stu1.course,"BCA");
+     printf("course = %s\n", stu1.course);
+  
+     stu1.percentage = 81.2;
+     printf("percentage = %.f%%\n",stu1.percentage);
+    return 0;
+}
